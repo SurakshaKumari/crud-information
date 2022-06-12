@@ -1,0 +1,83 @@
+<html>
+    <head>
+       
+    </head>
+    <body>
+        <%- include('./header') %>
+        
+
+        <form  action="/student/index" method="POST" enctype="multipart" class="vh-100" style=" background: #F5F7FA; width: 700px;
+        margin: 30px auto;  padding-left: 20px;	
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        font-family: 'Open Sans', sans-serif;">
+            <div class="container h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-9">
+          
+                  <h1 class="text-white mb-4">Add User</h1>
+          
+                  <div class="card" style="border-radius: 15px;">
+                    <div class="card-body">
+          
+                      <div class="row align-items-center pt-4 pb-3">
+                        <div class="col-md-3 ps-5">
+          
+                          <h6 class="mb-0">Full name</h6>
+          
+                        </div>
+                        <div class="col-md-9 pe-5">
+          
+                          <input type="text" name ="name" class="form-control form-control-lg" />
+          
+                        </div>
+                      </div>
+          
+                      <hr class="mx-n3">
+          
+                      <div class="row align-items-center py-3">
+                        <div class="col-md-3 ps-5">
+          
+                          <h6 class="mb-0">Email address</h6>
+          
+                        </div>
+                        <div class="col-md-9 pe-5">
+          
+                          <input type="email" name="email" class="form-control form-control-lg" placeholder="example@example.com" />
+          
+                        </div>
+                      </div>
+          
+          
+                      <hr class="mx-n3">
+          
+                      <div class="row align-items-center py-3">
+                        <div class="col-md-3 ps-5">
+          
+                          <h6 class="mb-0">Image</h6>
+          
+                        </div>
+                        <div class="col-md-9 pe-5">
+          
+                          <input class="form-control form-control-Sm" id="formFileSm" type="file" />
+                          
+          
+                        </div>
+                      </div>
+          
+                      <hr class="mx-n3">
+          
+                      <div class="px-5 py-4">
+                        <button type="submit" value= "create" class="btn btn-primary btn-lg">Register </button>
+                      </div>
+          
+                    </div>
+                  </div>
+          
+                </div>
+              </div>
+            </div>
+        </form>
+    </body>
+</html>
+
+
