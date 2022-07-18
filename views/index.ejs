@@ -28,6 +28,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
+                                <th>No:</th>
                                 <th>Name</th>
                                 <th>Image</th>
                                 <th style="width:200px">Email</th>
@@ -35,19 +36,36 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <% var x=1 %>
+                            <% result.forEach((item)=> { %>
+               <tr>
+                <td><%= x++%> </td>
+                       <td> <%= item.name %></td>
+                          <td> <%= item.image %></td>
+                          <td> <%= item.email %></td>
                           
-                               
-                                    <tr>
-                                    <td>products[i].name</td>
-                                <td>product[i].image</td>
-                                <td>product[i].email</td>
+                              
                                 <td>
                                 
-                                    <a href="/student/form" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                    <a  href="/student/index" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    <form action="/edit/<%= item._id %>" method="get" class="d-inline">
+                                        <button type="submit" class="text-primary" > 
+                                     <i  class="material-icons">&#xE254;  </i>
+                                        </button>
+                                     </form>
+                                    
+                                    
+                                        <form action="/delete/<%= item._id %>" method="post" class="d-inline">
+                                            <button type="submit" class="text-danger" > 
+                                                <i class="material-icons">&#xE872;</i>
+                                            </button>
+                                         </form>
+                                    
                                 </td>
                             </tr>
-                           
+
+                           <% }) %>
+                          
+                      
                             
                         </tbody>
                     </table>
